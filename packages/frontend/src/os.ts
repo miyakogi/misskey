@@ -609,3 +609,9 @@ export function checkExistence(fileData: ArrayBuffer): Promise<any> {
 		});
 	});
 }*/
+
+export const shownNoteIds = new Set();
+
+window.setInterval(() => {
+	shownNoteIds.clear();
+}, 1000 * 60 * 5);
