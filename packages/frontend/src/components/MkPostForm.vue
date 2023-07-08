@@ -656,11 +656,9 @@ async function post(ev?: MouseEvent) {
 	}
 
 	const annoying =
-		text.includes('$[x2') ||
 		text.includes('$[x3') ||
 		text.includes('$[x4') ||
-		text.includes('$[scale') ||
-		text.includes('$[position');
+		text.includes('$[scale');
 
 	if (annoying && visibility === 'public') {
 		const { canceled, result } = await os.actions({
