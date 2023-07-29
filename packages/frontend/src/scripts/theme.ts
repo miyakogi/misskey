@@ -20,6 +20,24 @@ export const themeProps = Object.keys(lightTheme.props).filter(key => !key.start
 
 export const getBuiltinThemes = () => Promise.all(
 	[
+
+		// Miyaco themes
+		'l-latte',
+		'l-latte-dim',  // default light theme
+
+		'd-monotheme',  // default dark theme
+		'd-iceberg-tokyo',
+		'd-nightfox-blue',
+		'd-nightfox-green',
+		'd-nightfox-purple',
+		'd-nordfox-blue',
+		'd-nordfox-green',
+		'd-nordfox-pink',
+		'd-sonokai-blue',
+		'd-sonokai-green',
+		'd-sonokai-purple',
+
+		// Original Themes
 		'l-light',
 		'l-coffee',
 		'l-apricot',
