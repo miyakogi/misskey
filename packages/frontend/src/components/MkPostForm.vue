@@ -664,6 +664,9 @@ async function post(ev?: MouseEvent) {
 		os.popup(MkRippleEffect, { x, y }, {}, 'end');
 	}
 
+	/*
+	 * Disable annoying warning
+	 *
 	const annoying =
 		text.includes('$[x3') ||
 		text.includes('$[x4') ||
@@ -692,6 +695,7 @@ async function post(ev?: MouseEvent) {
 			visibility = 'home';
 		}
 	}
+	*/
 
 	let postData = {
 		text: text === '' ? undefined : text,
@@ -758,7 +762,7 @@ async function post(ev?: MouseEvent) {
 				'https://youtu.be/Efrlqw8ytg4',
 				'https://www.youtube.com/watch?v=Efrlqw8ytg4',
 				'https://m.youtube.com/watch?v=Efrlqw8ytg4',
-			
+
 				'https://youtu.be/XVCwzwxdHuA',
 				'https://www.youtube.com/watch?v=XVCwzwxdHuA',
 				'https://m.youtube.com/watch?v=XVCwzwxdHuA',
