@@ -1,6 +1,6 @@
 {
 	"name": "misskey",
-	"version": "13.14.2.dev-miyaco-5",
+	"version": "2023.9.0-beta.2-miyaco-6",
 	"codename": "nasubi",
 	"repository": {
 		"type": "git",
