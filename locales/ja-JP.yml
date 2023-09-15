@@ -417,6 +417,8 @@ totp: "認証アプリ"
 totpDescription: "認証アプリを使ってワンタイムパスワードを入力"
 moderator: "モデレーター"
 moderation: "モデレーション"
+moderationNote: "モデレーションノート"
+addModerationNote: "モデレーションノートを追加する"
 nUsersMentioned: "{n}人が投稿"
 securityKeyAndPasskey: "セキュリティキー・パスキー"
 securityKey: "セキュリティキー"
@@ -1023,7 +1025,7 @@ retryAllQueuesConfirmText: "一時的にサーバーの負荷が増大するこ�
 enableChartsForRemoteUser: "リモートユーザーのチャートを生成"
 enableChartsForFederatedInstances: "リモートサーバーのチャートを生成"
 showClipButtonInNoteFooter: "ノートのアクションにクリップを追加"
-largeNoteReactions: "ノートのリアクションを大きく表示"
+reactionsDisplaySize: "リアクションの表示サイズ"
 noteIdOrUrl: "ノートIDまたはURL"
 video: "動画"
 videos: "動画"
@@ -1105,6 +1107,7 @@ forYou: "あなたへ"
 currentAnnouncements: "現在のお知らせ"
 pastAnnouncements: "過去のお知らせ"
 youHaveUnreadAnnouncements: "未読のお知らせがあります。"
+useSecurityKey: "ブラウザまたはデバイスの指示に従って、セキュリティキーまたはパスキーを使用してください。"
 
 _announcement:
   forExistingUsers: "既存ユーザーのみ"
@@ -1390,6 +1393,9 @@ _achievements:
       title: "Brain Diver"
       description: "Brain Diverへのリンクを投稿した"
       flavor: "Misskey-Misskey La-Tu-Ma"
+    _smashTestNotificationButton:
+      title: "テスト過剰"
+      description: "通知のテストをごく短時間のうちに連続して行った"
 
 _role:
   new: "ロールの作成"
@@ -1740,7 +1746,6 @@ _2fa:
   securityKeyNotSupported: "お使いのブラウザはセキュリティキーに対応していません。"
   registerTOTPBeforeKey: "セキュリティキー・パスキーを登録するには、まず認証アプリの設定を行なってください。"
   securityKeyInfo: "FIDO2をサポートするハードウェアセキュリティキー、端末の生体認証やPINロック、パスキーといった、WebAuthn由来の鍵を登録します。"
-  chromePasskeyNotSupported: "Chromeのパスキーは現在サポートしていません。"
   registerSecurityKey: "セキュリティキー・パスキーを登録する"
   securityKeyName: "キーの名前を入力"
   tapSecurityKey: "ブラウザの指示に従い、セキュリティキーやパスキーを登録してください"
@@ -2047,6 +2052,10 @@ _notification:
   unreadAntennaNote: "アンテナ {name}"
   emptyPushNotificationMessage: "プッシュ通知の更新をしました"
   achievementEarned: "実績を獲得"
+  testNotification: "通知テスト"
+  checkNotificationBehavior: "通知の表示を確かめる"
+  sendTestNotification: "テスト通知を送信する"
+  notificationWillBeDisplayedLikeThis: "通知はこのように表示されます"
 
   _types:
     all: "すべて"
