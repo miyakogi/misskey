@@ -52,7 +52,7 @@ let disabled = $ref(false);
 const isLocalTimelineAvailable = (($i == null && instance.policies.ltlAvailable) || ($i != null && $i.policies.ltlAvailable));
 const isGlobalTimelineAvailable = (($i == null && instance.policies.gtlAvailable) || ($i != null && $i.policies.gtlAvailable));
 const withRenotes = $ref(props.column.withRenotes ?? true);
-const withReplies = $ref(props.column.withReplies ?? false);
+const withReplies = $ref(props.column.withReplies ?? true);
 const onlyFiles = $ref(props.column.onlyFiles ?? false);
 
 watch($$(withRenotes), v => {
