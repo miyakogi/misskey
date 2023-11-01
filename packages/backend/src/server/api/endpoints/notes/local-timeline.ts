@@ -141,7 +141,6 @@ export default class extends Endpoint<typeof meta, typeof paramDef> { // eslint-
 						return true;
 					});
 
-
 					redisTimeline.sort((a, b) => a.id > b.id ? -1 : 1);
 				}
 
