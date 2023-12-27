@@ -42,6 +42,33 @@ export class UtilityService {
 	}
 
 	@bindThis
+	public isSensitiveWordIncluded(text: string, sensitiveWords: string[]): boolean {
+		if (sensitiveWords.length === 0) return false;
+		if (text === '') return false;
+
+		const regexpregexp = /^\/(.+)\/(.*)$/;
+
+		const matched = sensitiveWords.some(filter => {
+			// represents RegExp
+			const regexp = filter.match(regexpregexp);
+			// This should never happen due to input sanitisation.
+			if (!regexp) {
+				const words = filter.split(' ');
+				return words.every(keyword => text.includes(keyword));
+			}
+			try {
+				// TODO: RE2インスタンスをキャッシュ
+				return new RegExp(regexp[1], regexp[2]).test(text);
+			} catch (err) {
+				// This should never happen due to input sanitisation.
+				return false;
+			}
+		});
+
+		return matched;
+	}
+
+	@bindThis
 	public extractDbHost(uri: string): string {
 		const url = new URL(uri);
 		return this.toPuny(url.hostname);
