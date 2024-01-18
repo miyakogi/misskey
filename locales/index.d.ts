@@ -1061,6 +1061,8 @@ export interface Locale {
     "noteIdOrUrl": string;
     "video": string;
     "videos": string;
+    "audio": string;
+    "audioFiles": string;
     "dataSaver": string;
     "accountMigration": string;
     "accountMoved": string;
@@ -1199,6 +1201,9 @@ export interface Locale {
     "showReplay": string;
     "replay": string;
     "replaying": string;
+    "ranking": string;
+    "lastNDays": string;
+    "backToTitle": string;
     "_bubbleGame": {
         "howToPlay": string;
         "_howToPlay": {
