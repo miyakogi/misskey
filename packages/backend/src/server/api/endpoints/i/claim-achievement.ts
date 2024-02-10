@@ -9,8 +9,7 @@ import { AchievementService, ACHIEVEMENT_TYPES } from '@/core/AchievementService
 
 export const meta = {
 	requireCredential: true,
-	prohibitMoved: true,
-	kind: 'write:account',
+	prohibitDeactivated: true,
 } as const;
 
 export const paramDef = {
