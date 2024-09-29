@@ -9,12 +9,16 @@ import { Inject, Injectable } from '@nestjs/common';
 import { DI } from '@/di-symbols.js';
 import type { Config } from '@/config.js';
 import { bindThis } from '@/decorators.js';
+import { MiMeta } from '@/models/Meta.js';
 
 @Injectable()
 export class UtilityService {
 	constructor(
 		@Inject(DI.config)
 		private config: Config,
+
+		@Inject(DI.meta)
+		private meta: MiMeta,
 	) {
 	}
 
@@ -103,5 +107,20 @@ export class UtilityService {
 	public toPunyNullable(host: string | null | undefined): string | null {
 		if (host == null) return null;
 		return toASCII(host.toLowerCase());
+	}
+
+	@bindThis
+	public isFederationAllowedHost(host: string): boolean {
+		if (this.meta.federation === 'none') return false;
+		if (this.meta.federation === 'specified' && !this.meta.federationHosts.some(x => `.${host.toLowerCase()}`.endsWith(`.${x}`))) return false;
+		if (this.isBlockedHost(this.meta.blockedHosts, host)) return false;
+
+		return true;
+	}
+
+	@bindThis
+	public isFederationAllowedUri(uri: string): boolean {
+		const host = this.extractDbHost(uri);
+		return this.isFederationAllowedHost(host);
 	}
 }
