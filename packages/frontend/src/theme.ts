@@ -44,9 +44,7 @@ export const getBuiltinThemes = () => Promise.all(
 
 		// Miyaco themes
 		'l-latte',
-		'l-latte-dim',  // default light theme
 
-		'd-monotheme',  // default dark theme
 		'd-iceberg-tokyo',
 		'd-nightfox-blue',
 		'd-nightfox-green',
