@@ -614,11 +614,6 @@ function loadReplies() {
 		replies.value = res;
 	});
 }
-if (!repliesLoaded.value) {
-	onMounted(async() => {
-		loadReplies()
-	});
-}
 
 const conversationLoaded = ref(false);
 
