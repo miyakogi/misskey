@@ -45,7 +45,7 @@ interface IEndpointMetaBase {
 	 * 引っ越し済みのユーザーによるリクエストを禁止するか
 	 * 省略した場合は false として解釈されます。
 	 */
-	readonly prohibitDeactivated?: boolean;
+	readonly prohibitMoved?: boolean;
 
 	/**
 	 * エンドポイントのリミテーションに関するやつ

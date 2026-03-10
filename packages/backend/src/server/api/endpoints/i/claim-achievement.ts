@@ -10,7 +10,8 @@ import { ACHIEVEMENT_TYPES } from '@/models/UserProfile.js';
 
 export const meta = {
 	requireCredential: true,
-	prohibitDeactivated: true,
+	prohibitMoved: true,
+	kind: 'write:account',
 } as const;
 
 export const paramDef = {

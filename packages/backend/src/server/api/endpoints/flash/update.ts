@@ -15,7 +15,7 @@ export const meta = {
 
 	requireCredential: true,
 
-	prohibitDeactivated: true,
+	prohibitMoved: true,
 
 	kind: 'write:flash',
 
