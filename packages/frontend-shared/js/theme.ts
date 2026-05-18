@@ -53,6 +53,22 @@ export const getBuiltinThemes = () => Promise.all(
 		'd-cherry',
 		'd-ice',
 		'd-u0',
+
+		// *** by miyaco ***
+		// light
+		'l-latte',
+
+		// dark
+		'd-iceberg-tokyo',
+		'd-nightfox-blue',
+		'd-nightfox-green',
+		'd-nightfox-purple',
+		'd-nordfox-blue',
+		'd-nordfox-green',
+		'd-nordfox-pink',
+		'd-sonokai-blue',
+		'd-sonokai-green',
+		'd-sonokai-purple',
 	].map(name => import(`@@/themes/${name}.json5`).then(({ default: _default }): Theme => _default)),
 );
 
